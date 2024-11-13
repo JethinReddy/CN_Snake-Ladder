@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import SetupPage from './Components/SetupPage';
+import GameBoard from './Components/GameBoard';
 
 function App() {
+  const [playerName, setPlayerName] = useState('');
+  const [gameId] = useState(uuidv4());
+
+  const handleStart = (name) => {
+    setPlayerName(name);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {playerName ? (
+        // Inline styling for the game-container
+        <div className="game-container" >
+          <GameBoard playerName={playerName} gameId={gameId}/>
+        </div>
+      ) : (
+        <SetupPage onStart={handleStart} />
+      )}
     </div>
   );
 }
