@@ -16,8 +16,8 @@ const VoiceChat = () => {
       console.log('Joining Agora channel...');
       await agoraClient.join(
         'b470801139ae4d3aa5375b4434930a04',
-        'Snake',
-        '007eJxTYDi889cf4TMbSng083Wn5m61DjTt6pj0e8EswZm+syfNCrFWYEgyMTewMDA0NLZMTDVJMU5MNDU2N00yMTE2sTQ2SDQw2XHCPL0hkJHh18sIRkYGCATxWRmC8xKzUxkYAIRBIAo=',
+        'Snake2',
+        '007eJxTYGDOlDj1hTWC9xvXtCin7EuXm3/+860yiJujV/ZXJSPEOEKBIcnE3MDCwNDQ2DIx1STFODHR1NjcNMnExNjE0tgg0cDEoN0mvSGQkeECmz0LIwMEgvhsDMF5idmpRgwMAN0EHNc=',
         null
       );
 
